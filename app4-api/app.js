@@ -1,1 +1,3 @@
-angular.module('apiApp', []);
+angular.module('apiApp', []).config(function($httpProvider) {
+  
+});

@@ -1,8 +1,11 @@
 angular.module('apiApp').service('service', function($http) {
-    this.getApi = function() {
+
+  var URL = 'http://smurfs.devmounta.in/smurfs/';
+
+    this.getSmurf = function() {
       return $http ({
         method: 'GET',
-        url: 'http://reqres.in/api/users?page=2'
-      })
+        url: URL
+      });
     }
 });
