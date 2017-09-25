@@ -1,11 +1,11 @@
-angular.module('myApp', ['ui.router']).config(function($stateProvider, $urlRouterProvider) {
+angular.module('myApp', ['ui.router']).config(function( $stateProvider, $urlRouterProvider) {
   $urlRouterProvider
         .otherwise('/');
 
   $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: './index.html'
+      templateUrl: './home.html'
     })
     .state('signup', {
       url: '/signup',

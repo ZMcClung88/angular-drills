@@ -1,3 +1,3 @@
-angular.module('app1').controller('mainCtrl', function($scope,service){
-
+angular.module('app1').controller('mainCtrl', function($scope, service) {
+  
 })

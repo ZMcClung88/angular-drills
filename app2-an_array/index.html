@@ -1,17 +1,20 @@
+<!DOCTYPE html>
 <html ng-app="arrayApp">
 	<head>
+		<meta charset="utf-8">
+		<title></title>
 		<link rel="stylesheet" href="style.css"></link>
 	</head>
 	<body ng-controller="arrayController">
 
-	<div class="" ng-repeat="q in person">
-		<ul>
-			<li>{{q.name}}</li>
-			<li>{{q.email}}</li>
-			<li>{{q.dateEmployed}}</li>
-			<li>{{q.phone}}</li>
-		</ul>
-	</div>
+		<div class="" ng-repeat="p in person">
+			<ul>
+				<li>{{p.name}}</li>
+				<li>{{p.email}}</li>
+				<li>{{p.dateEmployed}}</li>
+				<li>{{p.phone}}</li>
+			</ul>
+		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
