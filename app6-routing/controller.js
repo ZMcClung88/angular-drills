@@ -1,12 +1,12 @@
-angular.module('myApp').controller('mainCtrl', function($scope, service) {
+angular.module('app6').controller('mainCtrl', function($scope, service) {
+  //721
+  $scope.pokemonList = [];
 
-    $scope.getName = function() {
-      service.getName().then(function(data) {
-        $scope.name = data.data;
-      })
+  $scope.getRandomPokemon = function() {
+    for (var i = 0; i < 9; i++) {
+      service.getPokemon(Math.floor((Math.random() * 721) + 1)).then(function(response) {$scope.pokemonList.push(response)})
     }
+  }
 
-    getName();
-
-
+  $scope.getRandomPokemon();
 })

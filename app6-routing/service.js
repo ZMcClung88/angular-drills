@@ -1,13 +1,14 @@
-angular.module('myApp').service('service', function($http) {
+angular.module('app6').service('service', function($http) {
 
-  var URL = 'http://smurfs.devmounta.in/smurfs/';
-
-    this.getSmurf = function() {
-      return $http ({
-        method: 'GET',
-        url: URL,
-        scope: 
-      });
-    }
-
+  //http://pokeapi.co/api/v2/pokemon/
+   this.getPokemon = function (id) {
+    //  console.log('attempting');
+     return $http({
+       method: 'GET',
+       url: 'http://pokeapi.co/api/v2/pokemon/' + id
+     }).then(function(response) {
+      //  console.log(response.data);
+       return response.data
+     })
+   }
 });

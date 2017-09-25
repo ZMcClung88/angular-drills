@@ -1,18 +1,20 @@
-angular.module('myApp', ['ui.router']).config(function( $stateProvider, $urlRouterProvider) {
-  $urlRouterProvider
-        .otherwise('/');
+angular.module('app6', ['ui.router']).config(function($stateProvider, $urlRouterProvider) {
+
+  $urlRouterProvider.otherwise('/');
 
   $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: './home.html'
+      templateUrl: 'home.html',
+      controller: 'mainCtrl'
     })
     .state('signup', {
       url: '/signup',
-      templateUrl: './signup.html'
+      templateUrl: 'signup.html'
     })
     .state('details', {
-      url: '/details',
-      templateUrl: './details.html'
+      url: '/details/:id',
+      templateUrl: 'details.html',
+      controller: 'detailsCtrl'
     })
 })
