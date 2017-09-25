@@ -1,15 +1,21 @@
+<!DOCTYPE html>
 <html ng-app="app3">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
 	<body ng-controller="mainCtrl">
-		<input type="text" placeholder="Search..." ng-model="peoplesFilter">
-		<div class="" ng-repeat="p in peoples | filter: peoplesFilter">
+		<input type="text" placeholder="Search text here..." ng-model="peopleFilter">
+		<div class="" ng-repeat="p in people | filter: peopleFilter">
 			<ul>
 				<li>{{p.name}}</li>
-				<li>{{p.email}}</li>
-				<li>{{p.dateEmployed}}</li>
 				<li>{{p.phone}}</li>
+				<li>{{p.dateEmployed}}</li>
+				<li>{{p.email}}</li>
 			</ul>
 		</div>
-				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
 		<script src="service.js"></script>
