@@ -1,10 +1,19 @@
-<html ng-app="apiApp">
+<!DOCTYPE html>
+<html ng-app="app4">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
 	<body ng-controller="mainCtrl">
 
-		<div class="" ng-repeat="smurf in smurfs">
-			{{smurf.id}}
-			{{smurf.name}}
-			<img ng-src="{{smurf.img}}" alt="">
+		<input type="text" placeholder="Search..." ng-model="peopleFilter">
+		<div class="" ng-repeat="p in people | filter:peopleFilter">
+			<ul>
+				<li>Name: {{p.name}}</li>
+				<li>Gender: {{p.gender}}</li>
+				<li>Skin Color: {{p.skin_color}}</li>
+				<li>Hair Color: {{p.hair_color}}</li>
+			</ul>
 		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>

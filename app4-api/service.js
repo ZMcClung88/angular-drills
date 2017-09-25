@@ -1,11 +1,11 @@
-angular.module('apiApp').service('service', function($http) {
+angular.module('app4').service('service', function($http) {
 
-  var URL = 'http://smurfs.devmounta.in/smurfs/';
+  const URL="https://swapi.co/api/people/";
 
-    this.getSmurf = function() {
-      return $http ({
-        method: 'GET',
-        url: URL
-      });
-    }
+  this.getPeople = function() {
+    return $http ({
+      method: 'GET',
+      url: URL
+    });
+  }
 });

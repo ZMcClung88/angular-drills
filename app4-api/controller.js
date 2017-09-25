@@ -1,11 +1,12 @@
-angular.module('apiApp').controller('mainCtrl', function($scope, service) {
+angular.module('app4').controller('mainCtrl', function($scope, service) {
 
-    $scope.getSmurf = function() {
-      service.getSmurf().then(function(data) {
-        $scope.smurfs = data.data;
-      });
-      
-    }
-    $scope.getSmurf();
+  $scope.getPeople = function() {
+    service.getPeople().then(function(data) {
+      $scope.people = data.data.results;
+      console.log($scope.people)
+    });
+  }
+
+  $scope.getPeople();
 
 })
